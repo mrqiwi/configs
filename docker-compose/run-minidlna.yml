@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  dlna:
+    image: vladgh/minidlna
+    container_name: minidlna
+    restart: always
+    volumes:
+      - /data/shared:/shared 
+    network_mode: host  
+    environment:
+      MINIDLNA_MEDIA_DIR: /shared
+      MINIDLNA_FRIENDLY_NAME: pc

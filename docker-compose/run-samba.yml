@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  samba:
+    image: dperson/samba
+    container_name: samba
+    restart: always
+    network_mode: host
+    volumes:
+      - /data:/shared
+    environment:
+      NMBD: "true"
+      USERID: "1000"
+      GROUPID: "1000"
+      WORKGROUP: "WORKGROUP"
+      SHARE: "comp;/shared;yes;no;yes;all;'none';'none';'my data"
