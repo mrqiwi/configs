@@ -15,7 +15,9 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'thirtythreeforty/lessspace.vim'
-Plug 'sickill/vim-monokai'
+"отображение кода практически как в SublimeText
+Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'octol/vim-cpp-enhanced-highlight'
 "быстрое перемещение строк вверх/вниз
 Plug 'matze/vim-move'
 "поиск файла по содержимому
@@ -27,9 +29,10 @@ nnoremap <F4> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 let g:move_key_modifier = 'C'
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:sublimemonokai_term_italic = 1
 "включить подсветку синтаксиса
 syntax on
-colorscheme monokai
+colorscheme sublimemonokai
 "показывать номера строк
 set number
 "показывать относительные номера строк
@@ -53,7 +56,7 @@ set cursorline
 set colorcolumn=120
 "кодировка текста по умолчанию utf8
 set termencoding=utf8
-
+set termguicolors
 
 
 
