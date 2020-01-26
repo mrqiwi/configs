@@ -20,9 +20,8 @@ Plug 'terryma/vim-multiple-cursors'
 "отображение скопированного блока
 Plug 'machakann/vim-highlightedyank'
 "отображение кода практически как в SublimeText
-" Plug 'ErichDonGubler/vim-sublime-monokai'
-" Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'morhetz/gruvbox'
+Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'octol/vim-cpp-enhanced-highlight'
 "быстрое перемещение строк вверх/вниз
 Plug 'matze/vim-move'
 "поиск файла по содержимому
@@ -45,7 +44,7 @@ let g:pymode_lint = 1
 let g:pymode_rope = 1
 let g:pymode_syntax = 0
 let g:airline_theme='luna'
-" let g:sublimemonokai_term_italic = 1
+let g:sublimemonokai_term_italic = 1
 let g:move_key_modifier = 'C'
 let mapleader = ","
 
@@ -60,11 +59,7 @@ map <Leader> <Plug>(easymotion-prefix)
 
 "включить подсветку синтаксиса
 syntax on
-" colorscheme sublimemonokai
-colorscheme gruvbox
-set background=dark
-
-
+colorscheme sublimemonokai
 "показывать номера строк
 set number
 "показывать относительные номера строк

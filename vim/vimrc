@@ -1,31 +1,29 @@
 call plug#begin()
-
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'valloric/youcompleteme'
+"крутая строка состояния
+Plug 'vim-airline/vim-airline'
+"автозакрытие кавычек и скобок
+Plug 'jiangmiao/auto-pairs'
 "удобное комментирование кода
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-fugitive'
-"выделение измененных строк
-Plug 'airblade/vim-gitgutter'
-"редактирование текста сразу в нескольких местах
+"для редактирования нескольких курсоров
 Plug 'terryma/vim-multiple-cursors'
-Plug 'kien/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'jiangmiao/auto-pairs'
-"быстрое перемещение по коду
-Plug 'easymotion/vim-easymotion'
-Plug 'thirtythreeforty/lessspace.vim'
-"улучшенная строка состояния
-Plug 'vim-airline/vim-airline'
-"отображение кода практически как в SublimeText
-Plug 'ErichDonGubler/vim-sublime-monokai'
-Plug 'octol/vim-cpp-enhanced-highlight'
+"отображение скопированного блока
+Plug 'machakann/vim-highlightedyank'
+"цветовая схема
+Plug 'morhetz/gruvbox'
 "быстрое перемещение строк вверх/вниз
 Plug 'matze/vim-move'
 "поиск файла по содержимому
 Plug 'rking/ag.vim'
-
+"быстрое перемещение по коду
+Plug 'easymotion/vim-easymotion'
+"выделение измененных строк в git
+Plug 'airblade/vim-gitgutter'
+"подсвечивает пробелы в начале/конце строк
+Plug 'ntpeters/vim-better-whitespace'
+"удаляет лишние пробелы
+Plug 'thirtythreeforty/lessspace.vim'
 call plug#end()
 
 let g:move_key_modifier = 'C'
@@ -42,11 +40,12 @@ map <Leader> <Plug>(easymotion-prefix)
 
 "включить подсветку синтаксиса
 syntax on
-colorscheme sublimemonokai
+colorscheme gruvbox
+set background=dark
 "показывать номера строк
 set number
 "показывать относительные номера строк
-set relativenumber
+" set relativenumber
 "табы вместо пробелов
 set noexpandtab
 "размер табуляции по умолчанию
@@ -69,5 +68,8 @@ set termencoding=utf8
 set termguicolors
 
 
-
+"перемещение табом по автокомплиту
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+"автозакрытие окна-подсказки автокомплита
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
