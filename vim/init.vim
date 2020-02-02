@@ -55,6 +55,9 @@ nnoremap <F4> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 " , + s
 map <Leader> <Plug>(easymotion-prefix)
+"создание вкладки
+imap <F5> <Esc>:browse tabnew<CR>
+map <F5> <Esc>:browse tabnew<CR>
 
 
 "включить подсветку синтаксиса
@@ -86,7 +89,7 @@ set termencoding=utf8
 set termguicolors
 "вывод окна доп инфы снизу
 set splitbelow
-
+set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 "перемещение табом по автокомплиту
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
