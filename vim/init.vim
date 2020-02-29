@@ -20,7 +20,8 @@ Plug 'terryma/vim-multiple-cursors'
 "отображение скопированного блока
 Plug 'machakann/vim-highlightedyank'
 "отображение кода практически как в SublimeText
-Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'morhetz/gruvbox'
+Plug 'iCyMind/NeoSolarized'
 Plug 'octol/vim-cpp-enhanced-highlight'
 "быстрое перемещение строк вверх/вниз
 Plug 'matze/vim-move'
@@ -32,6 +33,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
 "работа с git из vim
 Plug 'tpope/vim-fugitive'
+"для работы скобками, кавычками и тд
+Plug 'tpope/vim-surround'
 "подсвечивает пробелы в начале/конце строк
 Plug 'ntpeters/vim-better-whitespace'
 "удаляет лишние пробелы
@@ -62,15 +65,15 @@ map <F5> <Esc>:browse tabnew<CR>
 
 "включить подсветку синтаксиса
 syntax on
-colorscheme sublimemonokai
+colorscheme gruvbox
+colorscheme NeoSolarized
+" set background=dark
 "показывать номера строк
 set number
 "показывать относительные номера строк
 " set relativenumber
 "табы вместо пробелов
-set noexpandtab
-"размер табуляции по умолчанию
-set tabstop=4
+set tabstop=4 shiftwidth=4 expandtab
 "подсвечивать поиск
 set hlsearch
 "поиск по мере набора.
@@ -79,8 +82,9 @@ set incsearch
 set ignorecase
 "подсвечивать текущую линию, где курсор
 set cursorline
+set cursorcolumn
 "поддержка мыши
-" set mouse=a
+set mouse=a
 "set mousemodel=popup
 "добавить линию на 120 символах
 set colorcolumn=120
@@ -90,6 +94,9 @@ set termguicolors
 "вывод окна доп инфы снизу
 set splitbelow
 set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;!@#$%&*`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+"вырубаем .swp и ~ (резервные) файлы
+set nobackup
+set noswapfile
 
 "перемещение табом по автокомплиту
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
