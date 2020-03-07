@@ -19,11 +19,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'terryma/vim-multiple-cursors'
 "отображение скопированного блока
 Plug 'machakann/vim-highlightedyank'
-<<<<<<< HEAD
 "красивое отображение кода
-=======
-"отображение кода практически как в SublimeText
->>>>>>> 5bdfd9dbf31ccc85cba5dd0ffde884c72513f560
 Plug 'morhetz/gruvbox'
 Plug 'iCyMind/NeoSolarized'
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -62,18 +58,11 @@ nmap <F8> :TagbarToggle<CR>
 " , + s
 map <Leader> <Plug>(easymotion-prefix)
 "создание вкладки
-<<<<<<< HEAD
-" imap <F5> <Esc>:browse tabnew<CR>
 map <F5> <Esc>:browse tabnew<CR>
 "убрать подсветку при нажатии Esc
 nnoremap <esc><esc> :noh<CR>
-"убирать номерка строк
+"убирать номера строк
 nnoremap <F2> :set nonumber!<CR>
-=======
-imap <F5> <Esc>:browse tabnew<CR>
-map <F5> <Esc>:browse tabnew<CR>
-
->>>>>>> 5bdfd9dbf31ccc85cba5dd0ffde884c72513f560
 
 "включить подсветку синтаксиса
 syntax on
