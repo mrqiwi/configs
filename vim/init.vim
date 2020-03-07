@@ -52,15 +52,13 @@ let mapleader = ","
 
 
 "убрать подсветку после поиска шаблона
-nnoremap <silent> <leader>c :nohlsearch<CR>
+nnoremap <esc><esc> :noh<CR>
 nnoremap <F4> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 " , + s
 map <Leader> <Plug>(easymotion-prefix)
 "создание вкладки
 map <F5> <Esc>:browse tabnew<CR>
-"убрать подсветку при нажатии Esc
-nnoremap <esc><esc> :noh<CR>
 "убирать номера строк
 nnoremap <F2> :set nonumber!<CR>
 
