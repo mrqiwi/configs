@@ -1,16 +1,16 @@
 call plug#begin('~/.local/share/nvim/plugged')
 "плагин для работы с Python
-Plug 'klen/python-mode'
+" Plug 'klen/python-mode'
 "автокомплит для C
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/deoplete-clangx'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete-clangx'
+Plug 'ycm-core/YouCompleteMe'
 "дерево проекта
 Plug 'scrooloose/nerdtree'
 "дерево функций и перемеменных
 Plug 'majutsushi/tagbar'
 "крутая строка состояния
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 "автозакрытие кавычек и скобок
 Plug 'jiangmiao/auto-pairs'
 "удобное комментирование кода
@@ -41,15 +41,16 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'thirtythreeforty/lessspace.vim'
 call plug#end()
 
-
-let g:deoplete#enable_at_startup = 1
-let g:pymode_lint = 1
-let g:pymode_rope = 1
-let g:pymode_syntax = 0
+"включить автокомплит
+let g:ycm_clangd_uses_ycmd_caching = 0
+let g:ycm_autoclose_preview_window_after_completion=1
+" let g:pymode_lint = 1
+" let g:pymode_rope = 1
+" let g:pymode_syntax = 0
 let g:airline_theme='luna'
 let g:move_key_modifier = 'C'
 let mapleader = ","
-
+let g:lightline = { 'colorscheme': 'solarized' }
 
 "убрать подсветку после поиска шаблона
 nnoremap <esc><esc> :noh<CR>
@@ -57,6 +58,7 @@ nnoremap <F4> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 " , + s
 map <Leader> <Plug>(easymotion-prefix)
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "создание вкладки
 map <F5> <Esc>:browse tabnew<CR>
 "убирать номера строк
@@ -64,9 +66,9 @@ nnoremap <F2> :set nonumber!<CR>
 
 "включить подсветку синтаксиса
 syntax on
-colorscheme gruvbox
 colorscheme NeoSolarized
-" set background=dark
+colorscheme gruvbox
+set background=dark
 "показывать номера строк
 set number
 "показывать относительные номера строк
@@ -100,4 +102,4 @@ set noswapfile
 "перемещение табом по автокомплиту
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 "автозакрытие окна-подсказки автокомплита
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
