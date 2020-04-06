@@ -64,6 +64,9 @@ map <F5> <Esc>:browse tabnew<CR>
 "убирать номера строк
 nnoremap <F2> :set nonumber!<CR>
 
+"сохранять файл как root
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+
 "включить подсветку синтаксиса
 syntax on
 colorscheme NeoSolarized
