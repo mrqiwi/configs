@@ -2,24 +2,23 @@
 
 alias inst='sudo apt-get -y install'
 alias upd='sudo apt-get update'
-alias off='shutdown -h now'
+alias off='sudo shutdown -h now'
 alias c='clear'
-alias r='ranger'
+alias r='reset'
 alias sandbox='sudo chroot /sandbox su - builder'
-alias flash-upd='sudo apt-get -y install adobe-flashplugin --upgrade'
 alias slp='sudo pm-suspend'
 alias aliases='vim .zshrc'
 alias s='speedtest'
 alias homepc='ssh 185.233.238.78 -p 2000'
-alias toshiba='ssh 192.168.0.101'
 alias mconsole='sudo picocom -b 57600 /dev/ttyUSB0'
 alias rconsole='sudo picocom -b 38400 /dev/ttyUSB0'
 alias dconsole='sudo picocom -b 115200 /dev/ttyUSB0'
 alias tel='/home/sergey/scrpits/telnet.exp'
-alias rzn='curl wttr.in/Ryazan'
-alias mysh='/home/sergey/mysh'
 alias logread='tail -n 30 /var/log/syslog'
 alias logreadf='watch -n 1 tail -n 50 /var/log/syslog'
+alias xc='xclip -selection clipboard'
+alias xp='xclip -selection clipboard -o'
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
