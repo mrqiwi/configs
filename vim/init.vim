@@ -9,6 +9,10 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 "дерево функций и перемеменных
 Plug 'majutsushi/tagbar'
+"удобный поиск файлов
+Plug 'ctrlpvim/ctrlp.vim'
+"ripgrep прямо в vim
+Plug 'jremmen/vim-ripgrep'
 "крутая строка состояния
 Plug 'itchyny/lightline.vim'
 "автозакрытие кавычек и скобок
