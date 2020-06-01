@@ -54,8 +54,19 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:airline_theme='luna'
 let g:move_key_modifier = 'C'
 let mapleader = ","
-let g:lightline = { 'colorscheme': 'solarized' }
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ 'enable': {
+          \ 'statusline': 1,
+          \ 'tabline': 0
+        \ }
+      \ }
 
+"удалять, а не вырезать
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
 "убрать подсветку после поиска шаблона
 nnoremap <esc><esc> :noh<CR>
 nnoremap <F4> :NERDTreeToggle<CR>
@@ -105,6 +116,10 @@ set langmap=!\\"№\\;%?*ёйцукенгшщзхъфывапролджэячс�
 "вырубаем .swp и ~ (резервные) файлы
 set nobackup
 set noswapfile
+"копировать во внешний буфер
+set clipboard=unnamedplus
+"всегда показывать вкладку
+set showtabline=2
 
 "перемещение табом по автокомплиту
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
