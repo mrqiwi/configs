@@ -1,9 +1,5 @@
 call plug#begin('~/.local/share/nvim/plugged')
-"плагин для работы с Python
-" Plug 'klen/python-mode'
 "автокомплит для C
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'Shougo/deoplete-clangx'
 Plug 'ycm-core/YouCompleteMe'
 "дерево проекта
 Plug 'scrooloose/nerdtree'
@@ -48,9 +44,7 @@ call plug#end()
 "включить автокомплит
 let g:ycm_clangd_uses_ycmd_caching = 0
 let g:ycm_autoclose_preview_window_after_completion=1
-" let g:pymode_lint = 1
-" let g:pymode_rope = 1
-" let g:pymode_syntax = 0
+
 let g:airline_theme='luna'
 let g:move_key_modifier = 'C'
 let mapleader = ","
@@ -123,5 +117,3 @@ set showtabline=2
 
 "перемещение табом по автокомплиту
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-"автозакрытие окна-подсказки автокомплита
-" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
